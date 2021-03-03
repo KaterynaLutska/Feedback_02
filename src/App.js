@@ -1,17 +1,20 @@
 import './App.css';
-// бібліотеки json //
 
-// import
-import Container from './components/container/Container';
+import { Component } from 'react';
 
-import s from './App.css';
+import Container from './components/Container';
+import Feedback from './components/Feedback';
 
-function App() {
-  return (
-    <div className={s.App}>
-      <Container></Container>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Container>
+          <Feedback />
+        </Container>
+      </div>
+    );
+  }
 }
 
 export default App;
