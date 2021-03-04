@@ -7,7 +7,7 @@ const Statistics = ({
 }) => {
   return (
     <div>
-      <h1 className="Statistic_title"></h1>
+      <h1></h1>
       <p className="statistic">Все чудово:{good}</p>
       <p className="statistic">Добре:{neutral}</p>
       <p className="statistic">Погано: {bad}</p>

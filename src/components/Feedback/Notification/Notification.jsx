@@ -1,5 +1,5 @@
 const Notification = ({ message }) => {
-  return <p>{message}</p>;
+  return <p className="statistic notification">{message}</p>;
 };
 
 export default Notification;
