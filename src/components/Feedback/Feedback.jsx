@@ -48,6 +48,7 @@ class Feedback extends Component {
           <FeedbackOptions
             options={this.state}
             onLeaveFeedback={this.onLeaveFeedback}
+            voice={totalVoice}
           />
         </Section>
         <Section title="Statistics">

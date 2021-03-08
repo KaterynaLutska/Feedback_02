@@ -1,4 +1,4 @@
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+const FeedbackOptions = ({ options, onLeaveFeedback, voice }) => {
   const buttons = Object.keys(options);
 
   return (

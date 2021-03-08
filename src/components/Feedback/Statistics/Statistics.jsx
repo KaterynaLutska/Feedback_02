@@ -8,12 +8,12 @@ const Statistics = ({
   return (
     <div>
       <h1></h1>
-      <p className="statistic">Все чудово:{good}</p>
-      <p className="statistic">Добре:{neutral}</p>
-      <p className="statistic">Погано: {bad}</p>
-      <p className="statistic">Усі відгуки:{countTotalFeedback} </p>
+      <p className="statistic">Good:{good}</p>
+      <p className="statistic">Neutral:{neutral}</p>
+      <p className="statistic">Bad: {bad}</p>
+      <p className="statistic">All feedbacks:{countTotalFeedback} </p>
       <p className="statistic">
-        Лише позитивні:
+        Just positive feedbacks:
         {countPositiveFeedbackPercentage}%
       </p>
     </div>
