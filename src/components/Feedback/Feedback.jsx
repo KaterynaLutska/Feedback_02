@@ -17,23 +17,26 @@ class Feedback extends Component {
   onLeaveFeedback = event => {
     const target = event.target.textContent;
     this.setState(prevent => ({
-      ...{ [target.toLowerCase()]: prevent[target.toLowerCase()] + 1 },
+      [target.toLowerCase()]: prevent[target.toLowerCase()] + 1,
     }));
   };
 
   countTotalFeedback = () => {
-    const value = Object.values(this.state);
-    const totalVoice = value.reduce((akk, value) => akk + value, 0);
+    const { bad, good, neutral } = this.state;
+    const totalVoice = bad + good + neutral;
     return totalVoice;
+
+    // або через reduce //
+    // const value = Object.values(this.state);
+    // const totalVoice = value.reduce((akk, value) => akk + value, 0);
+    // return totalVoice;
   };
 
   countPositiveFeedbackPercentage = () => {
     let positivePercentage = 0;
-    const badVoice = this.state.bad;
+    const { good } = this.state;
     const totalVoice = this.countTotalFeedback();
-    positivePercentage = Math.round(
-      ((totalVoice - badVoice) / totalVoice) * 100,
-    );
+    positivePercentage = Math.round((good * 100) / totalVoice);
     return positivePercentage;
   };
 
@@ -48,7 +51,6 @@ class Feedback extends Component {
           <FeedbackOptions
             options={this.state}
             onLeaveFeedback={this.onLeaveFeedback}
-            voice={totalVoice}
           />
         </Section>
         <Section title="Statistics">
